@@ -27,7 +27,7 @@ class TriviaGame {
 
     async fetchQuestions() {
         try {
-            const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
+            const response = await fetch('https://opentdb.com/api.php?amount=10&category=18&type=multiple');
             const data = await response.json();
             this.questions = data.results;
         } catch (error) {
